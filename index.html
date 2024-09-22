@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FXCrypto Converter</title>
+  <link rel="stylesheet" href="style.css"> <!-- Make sure to link your CSS file -->
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <div class="nav__logo">
+        <a href="#">FXCrypto Converter</a>
+      </div>
+      <div class="toggle__btn">&#9776;</div>
+      <ul class="nav__links">
+        <li><a href="#" class="link">Home</a></li>
+        <li><a href="#" class="link">Converter</a></li>
+        <li><a href="#" class="link">Rates</a></li>
+        <li><a href="#" class="link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Effortless Conversions</h2>
+    <h1>Your One-Stop Foreign & Crypto Exchange</h1>
+    <div class="hero-btns">
+      <a href="https://riyad-x.github.io/live-tracker/" class="hero-btn">Crypto</a>
+      <a href="https://riyad-x.github.io/crypto/" class="hero-btn2">Currency</a>
+    </div>
+    <div>
+      <p></p>
+    </div>
+
+  </section>
+
+
+  <script>
+    // JavaScript to toggle menu visibility on smaller screens
+    const toggleBtn = document.querySelector('.toggle__btn');
+    const navLinks = document.querySelector('.nav__links');
+
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
