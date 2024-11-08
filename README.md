@@ -4,7 +4,7 @@ Welcome to the **FX and Foreign Currency Converter** project! This application a
 
 ## Live Demo 🌐
 
-Check out the live version of the project [here](https://riyad-x.github.io/Home-page-Fx/).
+Check out the live version of the project [here](https://riyad899.github.io/Home-page-Fx/).
 
 ## Features ✨
 
