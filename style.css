@@ -42,7 +42,22 @@ nav {
   justify-content: space-between;
   position: relative;
 }
-
+#logIn{
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 9px;
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#logIn:hover{
+  background-color: var(--primary-color);
+}
 .hero-btns {
   display: flex; /* Flexbox for side-by-side alignment */
   justify-content: center; /* Center the buttons horizontally */
@@ -218,4 +233,185 @@ nav {
     width: 250px;
     padding: 20px;
   }
+}
+.vh-100{
+
+border-radius: 16px;
+width: 500px;
+height: 500px;
+text-align: center;
+position: relative;
+left: 30px;
+
+
+}
+.modal {
+
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Modal and Form Styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.modal-content {
+  background-color: #376491a2;
+  margin: 10% auto;
+  padding: 0;
+  width:40%;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Login Form Card Styling */
+.card {
+  border: none;
+  border-radius: 1rem;
+
+  color: #fff; /* White text */
+}
+
+
+
+/* Button and Input Styling */
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Form Inputs */
+.emailPass {
+  background-color:transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.emailPass:focus {
+  background-color: transparent;
+  border-color: #1cb5e0;
+  outline: none;
+}
+
+/* Form Labels */
+.form-label {
+  color: #ccc;
+}
+
+/* Forgot Password Link */
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text-white-50c
+
+/* Social Media Icons */
+.social-icons a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #1cb5e0;
+}
+
+.text-para {
+  padding-top: 10px;
+  padding-bottom: 40px;
+  color: #ccc;
+}
+
+/* Adjustments for Small Screens */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 50%;
+  }
+
+  .fw-bold {
+    font-size: 30px;
+  }
+
+  .btn-outline-light {
+    width: 100%;
+  }
+}
+
+/* Blur effect for background when modal is open */
+.blur-background .hero,
+.blur-background header {
+  filter: blur(8px);
+}
+
+/* General Styling */
+.fw-bold {
+  padding-top: 60px;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px -2px 7px rgba(0, 0, 0, 0.61);
+}
+.sign-up{
+  color: rgb(190, 190, 190);
+}
+.sign-up:hover{
+  color:rgb(255, 255, 255);
+}
+#forgot{
+text-decoration: none;
+position: relative;
+top: -30px;
+}
+#forgot:hover{
+  color:rgb(255, 255, 255);
+  text-shadow: 1px -2px 7px rgba(0, 0, 0, 0.61);
+}
+.form-label{
+ position: relative;
+ top: -93px;
+ text-shadow: 1px -2px 7px rgba(0, 0, 0, 0.61);
+}
+#log{
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  position: relative;
+  top: -10px;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  font-size: 17px;
+  background-color: transparent;
+  border: white solid 2px;
+  color: white;
+  box-shadow:1px -2px 7px rgba(61, 60, 60, 0.61);;
+}
+#log:hover{
+  transition: transform 2ms;
+  transform: translateY(-3px);
 }
