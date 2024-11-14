@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FXCrypto Converter</title>
-  <link rel="stylesheet" href="style.css"> <!-- Make sure to link your CSS file -->
+  <link rel="stylesheet" href="style.css"> <!-- Link your CSS file -->
 </head>
 <body>
   <!-- Header Section -->
@@ -20,6 +20,7 @@
         <li><a href="https://riyad899.github.io/crypto-live-tracker/" class="link">Crypto</a></li>
         <li><a href="https://riyad899.github.io/forgine-convertor/" class="link">Convertor</a></li>
         <li><a href="https://riyad899.github.io/About-description/" class="link">About</a></li>
+        <li><a href="#" id="logIn" class="link">Log in</a></li>
       </ul>
     </nav>
   </header>
@@ -35,18 +36,73 @@
     <div>
       <p></p>
     </div>
-
   </section>
 
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+                  <div class="mb-md-5 mt-md-4 pb-5">
+                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                    <p class="text-para">Please enter your login and password!</p>
+                    <div data-mdb-input-init class="form-outline form-white mb-4">
+                      <input type="email" id="typeEmailX" class="emailPass" />
+                      <label class="form-label" for="typeEmailX">Email</label>
+                    </div>
+                    <div data-mdb-input-init class="form-outline form-white mb-4">
+                      <input type="password" id="typePasswordX" class="emailPass" />
+                      <label class="form-label" for="typePasswordX">Password</label>
+                    </div>
+                    <p class="small mb-5 pb-lg-2"><a class="text-white-50" id="forgot" href="#!">Forgot password?</a></p>
+                    <button data-mdb-button-init data-mdb-ripple-init class="btnLog" id="log" type="submit">Login</button>
+                    <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                      <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                      <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                      <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="mb-0">Don't have an account? <a href="#!" class="sign-up">Sign Up</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
 
+  <!-- JavaScript for Modal -->
   <script>
     // JavaScript to toggle menu visibility on smaller screens
     const toggleBtn = document.querySelector('.toggle__btn');
     const navLinks = document.querySelector('.nav__links');
+    const loginModal = document.getElementById('loginModal');
+    const logInButton = document.getElementById('logIn');
 
     toggleBtn.addEventListener('click', () => {
       navLinks.classList.toggle('open');
     });
+
+    // Show the modal when the "Log in" button is clicked
+    logInButton.addEventListener('click', () => {
+      loginModal.style.display = 'block';
+      document.body.classList.add('blur-background');
+    });
+
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+      if (event.target == loginModal) {
+        loginModal.style.display = 'none';
+        document.body.classList.remove('blur-background');
+      }
+    };
   </script>
 </body>
 </html>
