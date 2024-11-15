@@ -234,19 +234,18 @@ nav {
     padding: 20px;
   }
 }
-.vh-100{
-
-border-radius: 16px;
-width: 500px;
-height: 500px;
-text-align: center;
-position: relative;
-left: 30px;
-
-
+.vh-100 {
+  border-radius: 16px;
+  width: 100%; /* Set to 100% for responsive width */
+  max-width: 500px; /* Limit to 500px */
+  height: auto; /* Use auto to adapt height */
+  text-align: center;
+  position: relative;
+  left: 0; /* Remove fixed positioning for better responsiveness */
+  margin: 20px auto; /* Center it on the page */
 }
-.modal {
 
+.modal {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -258,25 +257,12 @@ left: 30px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-
 /* Modal and Form Styling */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-}
-
 .modal-content {
   background-color: #376491a2;
   margin: 10% auto;
   padding: 0;
-  width:40%;
+  width: 80%; /* Adjust width for smaller screens */
   max-width: 600px;
   border-radius: 8px;
   overflow: hidden;
@@ -286,16 +272,17 @@ left: 30px;
 .card {
   border: none;
   border-radius: 1rem;
-
   color: #fff; /* White text */
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding doesn't affect layout */
 }
-
-
 
 /* Button and Input Styling */
 .btn-outline-light {
   border-color: #fff;
   color: #fff;
+  display: inline-block; /* Keep button inline */
+  margin-top: 10px; /* Add some margin */
 }
 
 .btn-outline-light:hover {
@@ -305,13 +292,14 @@ left: 30px;
 
 /* Form Inputs */
 .emailPass {
-  background-color:transparent;
+  background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
   padding: 15px 20px;
   width: 100%;
   border-radius: 5px;
   margin-bottom: 20px;
+  box-sizing: border-box; /* Ensure padding doesn't affect layout */
 }
 
 .emailPass:focus {
@@ -323,6 +311,8 @@ left: 30px;
 /* Form Labels */
 .form-label {
   color: #ccc;
+  display: block;
+  margin-bottom: 5px;
 }
 
 /* Forgot Password Link */
@@ -330,12 +320,11 @@ left: 30px;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.text-white-50c
-
 /* Social Media Icons */
 .social-icons a {
   color: #fff;
   transition: color 0.3s;
+  margin: 0 10px; /* Add spacing between icons */
 }
 
 .social-icons a:hover {
@@ -346,20 +335,57 @@ left: 30px;
   padding-top: 10px;
   padding-bottom: 40px;
   color: #ccc;
+  font-size: 14px; /* Adjust font size for better readability */
+}
+
+/* Adjustments for Medium Screens */
+@media (max-width: 1024px) {
+  .modal-content {
+    width: 70%;
+  }
+
+  .fw-bold {
+    font-size: 32px;
+  }
+
+  .btn-outline-light {
+    width: 80%;
+  }
 }
 
 /* Adjustments for Small Screens */
 @media (max-width: 768px) {
   .modal-content {
-    width: 50%;
+    width: 90%; /* Increase width for smaller screens */
   }
 
   .fw-bold {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .btn-outline-light {
     width: 100%;
+  }
+
+  .emailPass {
+    padding: 10px 15px; /* Adjust padding for smaller devices */
+  }
+}
+
+/* Adjustments for Extra Small Screens */
+@media (max-width: 480px) {
+  .fw-bold {
+    font-size: 24px;
+  }
+
+  #log {
+    width: 80px; /* Make button smaller for small screens */
+    font-size: 15px; /* Adjust font size */
+  }
+
+  .form-label {
+    font-size: 12px;
+
   }
 }
 
@@ -371,32 +397,33 @@ left: 30px;
 
 /* General Styling */
 .fw-bold {
-  padding-top: 60px;
-  font-size: 40px;
+  padding-top: 40px; /* Adjust padding for smaller screens */
+  font-size: 36px;
   color: rgb(255, 255, 255);
   text-shadow: 1px -2px 7px rgba(0, 0, 0, 0.61);
 }
-.sign-up{
+
+.sign-up {
   color: rgb(190, 190, 190);
 }
-.sign-up:hover{
-  color:rgb(255, 255, 255);
+
+.sign-up:hover {
+  color: rgb(255, 255, 255);
 }
-#forgot{
-text-decoration: none;
-position: relative;
-top: -30px;
+
+#forgot {
+  text-decoration: none;
+  position: relative;
+  top: -10px; /* Adjust for better alignment */
+  font-size: 14px; /* Smaller text for mobile */
 }
-#forgot:hover{
-  color:rgb(255, 255, 255);
+
+#forgot:hover {
+  color: rgb(255, 255, 255);
   text-shadow: 1px -2px 7px rgba(0, 0, 0, 0.61);
 }
-.form-label{
- position: relative;
- top: -93px;
- text-shadow: 1px -2px 7px rgba(0, 0, 0, 0.61);
-}
-#log{
+
+#log {
   border-radius: 10px;
   width: 100px;
   height: 40px;
@@ -409,9 +436,14 @@ top: -30px;
   background-color: transparent;
   border: white solid 2px;
   color: white;
-  box-shadow:1px -2px 7px rgba(61, 60, 60, 0.61);;
+  box-shadow: 1px -2px 7px rgba(61, 60, 60, 0.61);
 }
-#log:hover{
+
+#log:hover {
   transition: transform 2ms;
   transform: translateY(-3px);
+}
+#pass{
+  position: relative;
+  top: -90px;
 }
